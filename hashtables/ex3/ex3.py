@@ -3,6 +3,19 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    result = []
+
+    cache = {}
+
+
+    for x in arrays: 
+        for num in x: 
+            if num not in cache:
+                cache[num] = 1
+            else: 
+                result.append(num)
+
+    result = list(dict.fromkeys(result))
 
     return result
 
